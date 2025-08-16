@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "SafeSurf",
+    "version": "1.0",
+    "description": "Checks if the current website is safe using Google Safe Browsing API.",
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "storage"
+    ],
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["popup.js"]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/shield.png",
+            "48": "icons/shield.png",
+            "128": "icons/shield.png"
+        }
+    },
+    "host_permissions": [
+        "https://safebrowsing.googleapis.com/*"
+    ]
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SafeSurf</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h2>🔎 URL Trust Checker</h2>
+
+        <div class="card">
+            <img id="icon" src="icons/shield.png" alt="status icon" />
+            <p id="status" class="safe">Checking...</p>
+            <p class="url-box" id="urlBox">Loading URL...</p>
+        </div>
+        <div class="progress">
+            <div id="riskBar" class="progress-bar"></div>
+        </div>
+
+        <footer>Powered by Google Safe Browsing API</footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
